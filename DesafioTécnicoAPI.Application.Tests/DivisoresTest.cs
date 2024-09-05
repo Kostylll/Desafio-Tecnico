@@ -14,22 +14,29 @@ namespace DesafioTécnicoAPI.Application.Tests
         [Fact]
         public async Task ObterDivisores()
         {
+            //Arrange
             List<int> divisoresEsperados = new List<int> { 1, 3, 5, 9, 15, 45 };
 
             int numero = 45;
+
+            //Act
             var divisores = await _service.ObterDivisores(numero);
 
+            //Assets
             Assert.Equal(divisoresEsperados, divisores);
         }
 
         [Fact]
         public async Task ObterDivisoresPrimos()
         {
+            //Arrange
             List<int> divisoresPrimosEsperados = new List<int>  {1,3,5};
             List<int> divisores = new List<int> { 1, 3, 5, 9, 15, 45 };
 
+            //Act
             var result = await _service.ObterDivisoresPrimos(divisores);
 
+            //Assets
             Assert.Equal(divisoresPrimosEsperados, result);
         }
     }
