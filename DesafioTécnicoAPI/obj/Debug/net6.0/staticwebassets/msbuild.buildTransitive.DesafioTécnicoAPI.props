@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\DesafioTécnicoAPI.props" />
-</Project>

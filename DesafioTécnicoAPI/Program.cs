@@ -1,12 +1,16 @@
 using DesafioTécnicoAPI.Extensions;
+using DesafioTecnicoAPI.Infrastructure.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddFeatureServices();
 builder.Services.AddControllers(x => x.AllowEmptyInputInBodyModelBinding = true);
+builder.Services.AddLogging();
 
 var app = builder.Build();
 
@@ -19,6 +23,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseExceptionHandler();
 
 app.UseAuthorization();
 
