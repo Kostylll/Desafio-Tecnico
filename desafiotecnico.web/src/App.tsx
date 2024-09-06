@@ -3,7 +3,7 @@ import './App.css'
 import InputComponent from "./components/InputComponent";
 import { ContextApi } from "./context/ContextApi";
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
       <>
