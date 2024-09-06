@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioTecnicoAPI.Applicati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioTecnicoAPI.Application.Console", "DesafioTécnicoAPI.Application.Console\DesafioTecnicoAPI.Application.Console.csproj", "{4F9D9A8C-EFEB-4793-8F96-9127881D76D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioTecnico.FrontEnd", "DesafioTecnico.FrontEnd\DesafioTecnico.FrontEnd.csproj", "{03086FA4-6190-413A-A022-0F442E5B6D55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4F9D9A8C-EFEB-4793-8F96-9127881D76D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F9D9A8C-EFEB-4793-8F96-9127881D76D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F9D9A8C-EFEB-4793-8F96-9127881D76D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03086FA4-6190-413A-A022-0F442E5B6D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03086FA4-6190-413A-A022-0F442E5B6D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03086FA4-6190-413A-A022-0F442E5B6D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03086FA4-6190-413A-A022-0F442E5B6D55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
