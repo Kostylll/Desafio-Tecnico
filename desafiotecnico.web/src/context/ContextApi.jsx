@@ -12,7 +12,7 @@ export const ContextApi = ({ children }) => {
     const sendNumberToAPI = async (number) => {
         try {
             const response = await fetch(
-                `https://localhost:7038/api/Number?numero=${number}`,
+                `https://localhost:7038/api/v1/Number?numero=${number}`,
                 {
                     method: "POST",
                     headers: {

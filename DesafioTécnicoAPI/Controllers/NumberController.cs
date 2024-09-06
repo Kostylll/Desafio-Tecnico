@@ -1,10 +1,12 @@
-﻿using DesafioTécnicoApi.Application.Interfaces;
+﻿using Asp.Versioning;
+using DesafioTécnicoApi.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DesafioTécnicoAPI.Controllers
 {
+    [ApiVersion(1)]
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v{v:apiVersion}/[controller]")]
     public class NumberController : Controller
     {
         private readonly INumberService _numberService;

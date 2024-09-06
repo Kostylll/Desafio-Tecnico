@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using DesafioTécnicoAPI.Extensions;
 using DesafioTecnicoAPI.Infrastructure.Middleware;
 
@@ -12,6 +13,21 @@ builder.Services.AddFeatureServices();
 builder.Services.AddControllers(x => x.AllowEmptyInputInBodyModelBinding = true);
 builder.Services.AddLogging();
 
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1);
+    options.ReportApiVersions = true;
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ApiVersionReader = ApiVersionReader.Combine(
+        new UrlSegmentApiVersionReader(),
+        new HeaderApiVersionReader("X-Api-Version"));
+})
+.AddMvc()
+.AddApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'V";
+    options.SubstituteApiVersionInUrl = true;
+});
 var app = builder.Build();
 
 app.UseCors(m => m.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
